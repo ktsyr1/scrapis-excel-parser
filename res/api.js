@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 async function rename(file) {
     let format = file.originalname.split('.')
     format = format[format.length - 1]
+
     let filename = `${file.path}.${format}`
     fs.rename(file.path, filename, (err) => {
         if (err) throw err;
@@ -22,6 +23,7 @@ app.post('/', upload.fields([{ name: 'excel', maxCount: 1 }]), async (req, res, 
     let file = req.files.excel[0];
     if (file.mimetype === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
         let path = await rename(file);
+        console.log({ data: 'ok' });
         let data = await xlsx(path)
         res.json({ message: data });
     }
