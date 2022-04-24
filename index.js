@@ -3,6 +3,7 @@ const app = express()
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+require('dotenv').config()
 // start imports
 const fs = require("fs");
 const multer = require("multer");
@@ -41,7 +42,7 @@ async function xlsx(path) {
 // end code
 
 
-const port = 5000
+const port = process.env.PORT|| 5050
 app.listen(port, () => {
     console.log(`⚡️ app listening on port ${port}`)
 })
