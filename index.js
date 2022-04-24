@@ -26,7 +26,7 @@ async function rename(file) {
     let format = file.originalname.split(".")
     format = format[format.length - 1]
     let filename = `${file.path}.${format}`
-    try {
+    try { 
         await fs.renameSync(file.path, filename)
         return filename
     } catch (err) { throw err }

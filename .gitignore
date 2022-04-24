@@ -2,7 +2,7 @@
 * text=auto
 
 /node_modules/**
-/uploads/**.xlsx
+/uploads/**.xlsx**
 package-lock.json 
 .env
 .env.example
