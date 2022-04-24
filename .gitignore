@@ -3,3 +3,7 @@
 
 /node_modules/**
 /uploads/**.xlsx
+package-lock.json 
+.env
+.env.example
+.env.local 
