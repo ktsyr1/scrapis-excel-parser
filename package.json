@@ -4,10 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "npm run shell",
+    "deploy": "firebase deploy", 
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "logs": "firebase functions:log"
   },
-  "author": "",
+  "author": "Qotayba",
+  "engines": {
+    "node": "8" 
+  },
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
