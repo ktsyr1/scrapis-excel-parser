@@ -7,9 +7,6 @@
     "dev": "nodemon index.js"
   },
   "author": "Qotayba",
-  "engines": {
-    "node": "8" 
-  },
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
