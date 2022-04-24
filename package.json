@@ -4,13 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "npm run shell",
-    "deploy": "firebase deploy", 
-    "lint": "eslint .",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "logs": "firebase functions:log"
+    "dev": "nodemon index.js"
   },
   "author": "Qotayba",
   "engines": {
