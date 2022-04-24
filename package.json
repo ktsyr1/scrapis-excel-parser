@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js",
+    "git": "git add -A && git commit -m 'commit for deploy to heroku' && git push heroku master"
   },
   "author": "Qotayba",
   "license": "ISC",
