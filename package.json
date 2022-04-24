@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "git": "git add -A && git commit -m 'commit for deploy to heroku' && git push heroku master"
+    "git": "git add .",
+    "commit": "git commit -m 'message'",
+    "push": "git push origin master", 
+    "tail":"heroku logs --tail"
   },
   "author": "Qotayba",
   "license": "ISC",
