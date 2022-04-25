@@ -22,6 +22,7 @@ app.post("/api", upload.fields([{ name: "excel", maxCount: 1 }]), async (req, re
     if (file.mimetype === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
         let path = await rename(file);
         let data = await xlsx(path)
+        if (req.query.type === "table") data = await table(data)
         res.status(200).json({ data });
     }
 })
