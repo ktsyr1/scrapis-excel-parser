@@ -21,9 +21,11 @@ function Audit(data) {
         let { int, Ab, index } = audit(E.id)
         // console.log(E); 
         let time = ABC.slice(2, 16).map(day => {
+            let end = ABC.map((a, i) => a === day ? i : 0)
+            end = end.filter((a) => a !== 0)[0] 
             let tody = data[`${day}2`]?.w,
-                start = data[`${day}${int}`]?.w,
-                end = data[`${day}${int}`]?.w
+                start = data[`${day}${int}`]?.w
+            end = data[`${ABC[end+1]}${int}`]?.w
             if (tody && start && end) return { tody, start, end }
         })
         time = time.filter(a => a !== undefined)
