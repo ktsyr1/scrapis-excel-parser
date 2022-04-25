@@ -8,7 +8,7 @@
     "start": "node index.js",
     "git": "git add .",
     "commit": "git commit -m 'message'",
-    "push": "git push origin master", 
+    "push": "git push heroku", 
     "tail":"heroku logs --tail"
   },
   "author": "Qotayba",

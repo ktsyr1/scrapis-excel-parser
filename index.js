@@ -12,7 +12,8 @@ const fs = require("fs");
 const multer = require("multer");
 let dir = "./uploads/"
 const upload = multer({ dest: dir })
-const { readFile } = require("xlsx")
+const { readFile } = require("xlsx");
+const Audit = require("./res/audit");
 // end imports
 
 // start code 
@@ -22,7 +23,7 @@ app.post("/api", upload.fields([{ name: "excel", maxCount: 1 }]), async (req, re
     if (file.mimetype === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
         let path = await rename(file);
         let data = await xlsx(path)
-        if (req.query.type === "table") data = await table(data)
+        if (req.query.type === "table") data = await Audit(data)
         res.status(200).json({ data });
     }
 })
