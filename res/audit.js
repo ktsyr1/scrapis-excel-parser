@@ -15,7 +15,7 @@ function Audit(data) {
     }
     filter.map(E => {
         let { int, Ab, index } = audit(E)
-        if (int >= 4 && Ab == 'a') tableDays.push({ id: E, purview: data[E].w, doctors: {} })
+        if (int >= 4 && Ab == 'a') tableDays.push({ id: E, title: data[E].w, doctors: {} })
     })
     tableDays.map(E => {
         let { int, Ab, index } = audit(E.id)
